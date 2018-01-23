@@ -1,0 +1,50 @@
+{
+  "groups": [
+    {
+      "name": "kafka-pipeline",
+      "children": [
+        "zipducer",
+        "consumer",
+        "zipenrich"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "name": "consumer",
+      "path": "$GOPATH/src/github.com/MonsantoCo/gokafkapoc/cmd/consumer",
+      "commands": {
+        "launch": "go run main.go"
+      },
+      "launch_checks": {
+        "wait": 500
+      },
+      "watch": {
+        "include": ["cmd/consumer"]
+      }
+    },
+    {
+      "name": "zipducer",
+      "path": "$GOPATH/src/github.com/MonsantoCo/gokafkapoc/cmd/zipducer",
+      "commands": {
+        "launch": "go run main.go"
+      },
+      "launch_checks": {
+        "wait": 500
+      },
+      "watch": {
+        "include": ["cmd/zipducer"]
+      }
+    },
+    {
+      "name": "zipenrich",
+      "path": "$GOPATH/src/github.com/MonsantoCo/gokafkapoc/cmd/zipenrich",
+      "commands": {
+        "launch": "go run main.go"
+      },
+      "watch": {
+        "include": ["cmd/zipenrich"]
+      }
+    }
+  ]
+}

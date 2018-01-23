@@ -1,0 +1,10 @@
+kafkapoc.iml
+.idea/
+vendor/
+cmd/firehose-filter
+*.key
+*.crt
+*.pub
+*.cer
+*.cert
+*.pem
