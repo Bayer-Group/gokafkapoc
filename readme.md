@@ -28,7 +28,7 @@ docker run --rm --name ldp --net=host landoop/fast-data-dev
 
 Pay attention to the `--name ldp`, as this is how you will enter the container to create topics or whatever else you want to run inside the container.
 
-#### OSX
+#### OSX and Windows
 To run this properly in Mac you'll have a few hoops to jump through. First you'll need to run the following to create an environment for your docker containers to run in:
 
 ```bash
@@ -56,10 +56,6 @@ docker run --rm --name ldp -p 2181:2181 -p 3030:3030 -p 8081-8083:8081-8083 \
            landoop/fast-data-dev:latest
 ```
 Pay attention to the `--name ldp`, as this is how you will enter the container to create topics or whatever else you want to run inside the container.
-
-#### Windows
-
-God help you....
 
 #### Verify setup
 
